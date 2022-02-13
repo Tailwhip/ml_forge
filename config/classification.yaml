@@ -1,0 +1,7 @@
+# General
+model_name: "resnet18"
+weights_dir: null
+# Dataset
+input_shape: [224, 224]
+n_classes: 1000
+

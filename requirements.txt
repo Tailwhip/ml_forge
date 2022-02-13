@@ -1,0 +1,7 @@
+numpy
+PyYAML
+termcolor
+torch
+torchinfo
+torchvision
+tqdm
