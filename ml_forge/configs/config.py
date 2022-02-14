@@ -1,9 +1,12 @@
+from dataclasses import dataclass
 import os
 import sys
 from abc import ABC, abstractmethod
 from typing import List, Tuple, Union
 
 import yaml
+
+from ..logger import logger
 
 
 class IConfig(ABC):
@@ -34,6 +37,7 @@ class ClassificationConfig(IConfig):
         self.__n_classes = config["n_classes"]
 
     def verify(self, config: dict):
+        logger.info()
         for p in ClassificationConfig.params:
             if not p in config.keys():
                 raise AttributeError(f"Parameter '{p}' not found "

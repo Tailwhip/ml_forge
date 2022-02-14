@@ -65,12 +65,12 @@ def main():
             "Programming Language :: Python",
             "Programming Language :: Python :: 3.8",
         ],
-        # package_data={"ml_forge": ["icons/*", "config/*.yaml"]},
-        # entry_points={
-        #     "console_scripts": [
-        #         # "mlf=tools.__main__:main",
-        #     ],
-        # },
+        package_data={"ml_forge": ["icons/*", "config/*.yaml"]},
+        entry_points={
+            "console_scripts": [
+                "clf=ml_forge.cli.classification:main",
+            ],
+        },
     )
 
 
