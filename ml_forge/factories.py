@@ -5,6 +5,9 @@ from abc import ABC, abstractmethod
 from typing import List, Tuple, Union
 
 from .configs.config_provider import ConfigProvider as CP
+from .configs.config import ClassificationConfig
+from .pipeline import DefaultClfPipeline
+
 from .logger import logger
 
 
@@ -15,20 +18,21 @@ class IPipelineFactory(ABC):
         pass
     
     @abstractmethod
-    def create_pipeline(self):
+    def create_resnest18_train_pipeline(self):
         pass
 
 
 class ClassificationFactory(IPipelineFactory):
 
-    def __init__(self, config_dir: str):
-        self.__config_dir = config_dir
-        
-    def load_config(self):
-        CP(self.__config_dir)
+    def load_config(self, config_dir: str):
+        config = ClassificationConfig()
+        CP(config)
+        CP.load_config(config_dir)
+        logger.debug(f"Loaded config: {CP.config}")
     
-    def create_pipeline(self):
-        logger.debug(CP.config)
-        return None
+    def create_resnest18_train_pipeline(self):
+        pipeline = None # DefaultClfPipeline()
+        return pipeline
     
+
 

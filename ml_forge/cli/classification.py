@@ -5,12 +5,12 @@ import sys
 import argparse
 
 from ..logger import logger
-from ..utils import set_random_seed
+from ..utils import DEVICE, set_random_seed
 from ..factories import ClassificationFactory
 
 
 def main():
-    logger.info("Pipeline start.")
+    logger.info("Pipeline started.")
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--config_dir", "-c", required=False,
@@ -20,13 +20,15 @@ def main():
                              "pipeline purpose.")
     args = parser.parse_args()
 
-    set_random_seed()
+    set_random_seed() # Reproducibility assurance
 
-    factory = ClassificationFactory(args.config_dir)
-    factory.load_config()
-    classification_pipeline = factory.create_pipeline()
+    logger.info(f"{DEVICE} device is going to be used.")
 
-    logger.info("Pipeline close.")
+    factory = ClassificationFactory()
+    factory.load_config(args.config_dir)
+    train_clf_pipeline = factory.create_resnest18_train_pipeline()
+
+    logger.info("Pipeline closed.")
 
 
 if __name__ == "__main__":

@@ -12,6 +12,10 @@ from ..logger import logger
 class IConfig(ABC):
     
     @abstractmethod
+    def load(self, config: dict):
+        pass
+
+    @abstractmethod
     def verify(self, config: dict):
         pass
 
@@ -26,22 +30,33 @@ class ClassificationConfig(IConfig):
         "model_name",
         "weights_dir",
         "input_shape",
-        "n_classes"
+        "n_classes",
+        "n_epochs",
+        "batch_size"
     ]
 
-    def __init__(self, config: dict):
+    def __str__(self) -> str:
+        return str(self.params)
+
+    def load(self, config: dict):
         self.verify(config)
-        self.__model_name = config["model_name"]
-        self.__weights_dir = config["weights_dir"]
-        self.__input_shape = config["input_shape"]
-        self.__n_classes = config["n_classes"]
+        self.model_name = config["model_name"]
+        self.weights_dir = config["weights_dir"]
+        self.input_shape = config["input_shape"]
+        self.n_classes = config["n_classes"]
+        self.n_epochs = config["n_epochs"]
+        self.batch_size = config["batch_size"]
 
     def verify(self, config: dict):
-        logger.info()
+        """!
+        Checks if given config file has all necessary parameters.
+        """
+        logger.info("Verifying config...")
         for p in ClassificationConfig.params:
             if not p in config.keys():
                 raise AttributeError(f"Parameter '{p}' not found "
                                       "in the config.")
+        logger.info("Config verified successfully!")
 
     def generate_template(self, dir: str):
         template = {}

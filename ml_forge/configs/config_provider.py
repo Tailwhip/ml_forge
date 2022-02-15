@@ -12,13 +12,16 @@ class ConfigProvider(metaclass=SingletonMeta):
 
     config: IConfig = None
 
-    def __init__(self, config_dir: str) -> None:
-        self.__load_config(config_dir)
+    def __init__(self, config: IConfig) -> None:
+        ConfigProvider.config = config
 
-    def __load_config(self, config_dir: str):
+    @classmethod
+    def load_config(cls, config_dir: str):
         """!
         Configuration loader.
         """
+        logger.info(f"Loading config from dir: {config_dir}")
         with open(config_dir) as f:
-            ConfigProvider(yaml.load(f, Loader=yaml.FullLoader))
-        logger.info(f"Config loaded from dir: {config_dir}")
+            yaml_cfg = yaml.load(f, Loader=yaml.FullLoader)
+        cls.config.load(yaml_cfg)
+        logger.info(f"Config loaded successfully!")

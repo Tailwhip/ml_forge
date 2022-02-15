@@ -177,7 +177,7 @@
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="152.39542705005346" width="191.29755910543145" x="574.6834538871166" y="-1158.8750866879654"/>
+          <y:Geometry height="152.39542705005346" width="191.29755910543145" x="574.6834538871166" y="-1145.0123731629387"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="69.7236328125" x="60.78696314646572" xml:space="preserve" y="3.0">EntryPoint<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -194,7 +194,7 @@
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="124.67000000000002" width="152.68000000000006" x="891.2000000000025" y="-1131.149659637912"/>
+          <y:Geometry height="124.67000000000002" width="152.68000000000006" x="896.0405009584703" y="-1131.149659637912"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.80810546875" x="25.935947265625032" xml:space="preserve" y="26.701171875">PipelineFactory<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -210,7 +210,7 @@ create_pipeline</y:MethodLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="105.84715697550592" width="152.68000000000006" x="1408.6619910543177" y="-1257.5853951011704"/>
+          <y:Geometry height="105.84715697550592" width="152.68000000000006" x="1408.6619910543177" y="-1257.5853951011707"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="48.763671875" x="51.95816406250003" xml:space="preserve" y="26.701171875">IConfig<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -226,7 +226,7 @@ generate_template</y:MethodLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="124.67000000000002" width="152.68000000000006" x="891.2000000000025" y="-776.5745309904149"/>
+          <y:Geometry height="124.67000000000002" width="152.68000000000006" x="896.0405009584703" y="-804.8809980830667"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.84814453125" x="49.41592773437503" xml:space="preserve" y="3.0">Pipeline<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -241,14 +241,14 @@ generate_template</y:MethodLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="124.67000000000002" width="191.29755910543145" x="871.891220447287" y="-966.6557927582528"/>
+          <y:Geometry height="83.50236464323751" width="191.29755910543145" x="876.7317214057546" y="-953.8620953141635"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="157.15625" x="17.070654552715723" xml:space="preserve" y="3.0">ConcretePipelineFactory<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel xml:space="preserve"/>
             <y:MethodLabel xml:space="preserve">load_config
-create_pipeline</y:MethodLabel>
+create_concrete_pipeline</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -272,7 +272,7 @@ create_pipeline</y:MethodLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="105.84715697550592" width="152.68000000000006" x="1178.7799889243925" y="-1257.5853951011707"/>
+          <y:Geometry height="76.0663143769969" width="152.68000000000006" x="1178.7799889243925" y="-1242.694973801916"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="101.5" x="25.590000000000032" xml:space="preserve" y="3.0">ConcreteConfig<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -288,7 +288,7 @@ generate_template</y:MethodLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="105.84715697550592" width="152.68000000000006" x="1178.7799889243925" y="-1121.7382381256648"/>
+          <y:Geometry height="105.84715697550592" width="152.68000000000006" x="1178.7799889243927" y="-1121.738238125665"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="97.89453125" x="27.392734375000032" xml:space="preserve" y="3.0">ConfigProvider<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
