@@ -1,10 +1,15 @@
-# General
+# Model
 model_name: "resnet18"
 weights_dir: null
+pretrained: true
+# Training
 n_epochs: 100
 batch_size: 2
 # Dataset
 dataset_name: "CIFAR10"
 input_shape: [224, 224]
 n_classes: 1000
-
+n_workers: 2
+# Optimizer
+lr: 0.001
+momentum: 0.9

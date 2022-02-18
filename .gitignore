@@ -12,3 +12,4 @@
 *.bak
 
 *logs
+*datasets

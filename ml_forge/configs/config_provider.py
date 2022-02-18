@@ -24,4 +24,4 @@ class ConfigProvider(metaclass=SingletonMeta):
         with open(config_dir) as f:
             yaml_cfg = yaml.load(f, Loader=yaml.FullLoader)
         cls.config.load(yaml_cfg)
-        logger.info(f"Config loaded successfully!")
+        logger.info(f"Config has been loaded.")
