@@ -12,4 +12,5 @@
 *.bak
 
 *logs
-*datasets
+*data
+*weights

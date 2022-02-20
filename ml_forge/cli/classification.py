@@ -5,7 +5,7 @@ import sys
 import argparse
 
 from ..logger import logger
-from ..utils import DEVICE, set_random_seed
+from ..utils import DEFAULT_DEVICE, set_random_seed
 from ..factories import ClassificationFactory
 
 
@@ -22,12 +22,10 @@ def main():
 
     set_random_seed() # Reproducibility assurance
 
-    logger.info(f"{DEVICE} device is going to be used.")
-
     factory = ClassificationFactory()
     factory.load_config(args.config_dir)
     train_clf_pipeline = factory.create_resnest18_train_pipeline()
-
+    train_clf_pipeline.run()
     logger.info("Pipeline closed.")
 
 

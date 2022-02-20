@@ -7,9 +7,18 @@ import random
 
 import torch
 import numpy as np
+from tqdm import tqdm
 
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEFAULT_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+
+def update_pbar(iterator: int, pbar: tqdm, description: str=None, 
+                print_interval: int=1):
+    if iterator % print_interval == 0:
+        if description:
+            pbar.set_description(description)
+        pbar.update(print_interval)
 
 
 def set_random_seed(seed: int=999):

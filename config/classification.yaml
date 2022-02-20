@@ -2,9 +2,12 @@
 model_name: "resnet18"
 weights_dir: null
 pretrained: true
+device: null
 # Training
 n_epochs: 100
+resume_epoch: null
 batch_size: 2
+grad_acc: 2
 # Dataset
 dataset_name: "CIFAR10"
 input_shape: [224, 224]
@@ -13,3 +16,7 @@ n_workers: 2
 # Optimizer
 lr: 0.001
 momentum: 0.9
+# General
+bar_update_interval: 10
+mlflow_update_interval: 1
+
