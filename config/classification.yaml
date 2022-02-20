@@ -11,7 +11,7 @@ grad_acc: 2
 # Dataset
 dataset_name: "CIFAR10"
 input_shape: [224, 224]
-n_classes: 1000
+n_classes: 10
 n_workers: 2
 # Optimizer
 lr: 0.001

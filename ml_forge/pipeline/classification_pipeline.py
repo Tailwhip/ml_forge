@@ -10,6 +10,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import torch.optim as optim
+from torchinfo import summary
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
@@ -39,7 +40,13 @@ class clfTrainPipeline(IClfTrainPipeline, IPipeline):
 
     def load_model(self):
         self.__model = models.resnet18(pretrained=CP.config.pretrained)
-        self.__model.to(self.__device)
+        for param in self.__model.parameters():
+            param.requires_grad = False
+        in_features = self.__model.fc.in_features
+        self.__model.fc = nn.Linear(in_features=in_features,
+                                    out_features=CP.config.n_classes)
+        self.__model = self.__model.to(self.__device)
+        summary(self.__model)
         logger.info(f"Model has been loaded.")
 
 
@@ -68,16 +75,22 @@ class clfTrainPipeline(IClfTrainPipeline, IPipeline):
 
     def run(self):
         
-        resume = 0
+        if not self.__model:
+            logger.error(f"No model loaded!")
+            return
+        if not self.__dataset:
+            logger.error(f"No dataset loaded!")
+            return
+
+        # Training epoch
+        resume = 0      
         if CP.config.resume_epoch:
             resume = CP.config.resume_epoch
-        # Training epoch
         for epoch in range(resume, CP.config.n_epochs):
             self.__model.train()
 
             pbar = tqdm(enumerate(self.__data_loader),
                         total=len(self.__data_loader))
-            pbar.set_description(f"Training {CP.config.model_name} step: ")
             start_time = time.time()
 
             for i, batch in pbar:
@@ -99,6 +112,7 @@ class clfTrainPipeline(IClfTrainPipeline, IPipeline):
                     self.__optimizer.step()
                     self.__optimizer.zero_grad(set_to_none=False)
 
-                update_pbar(i, pbar, 
+                description = f"Training {CP.config.model_name} loss: ({loss})"
+                update_pbar(i, pbar, description,
                             print_interval=CP.config.bar_update_interval)
        
